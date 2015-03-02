@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1640">
+    <title>三八女人节</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <style type="text/css">
+        /* reset */
+        html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+        header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+        table{border-collapse:collapse;border-spacing:0;}
+        caption,th{text-align:left;font-weight:normal;}
+        html,body,fieldset,img,iframe,abbr{border:0;}
+        i,cite,em,var,address,dfn{font-style:normal;}
+        [hidefocus],summary{outline:0;}
+        li{list-style:none;}
+        h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+        sup,sub{font-size:83%;}
+        pre,code,kbd,samp{font-family:inherit;}
+        q:before,q:after{content:none;}
+        textarea{overflow:auto;resize:none;}
+        label,summary{cursor:default;}
+        a,button{cursor:pointer;}
+        h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+        ins,u,s,a,a:hover{text-decoration:none;}
+        body,textarea,input,button,select,keygen,legend{font:12px/1.14 'microsoft yahei',arial;color:#333;outline:0;}
+        body{background:#fff;}
+        a{outline: none;}
+        a,a:hover{color:#333;}
+        img{vertical-align: middle;}
+        .fl{float:left;}
+        .fr{float:right;}
+        .clearfix:before,
+        .clearfix:after{content:'';display:table;}
+        .clearfix:after{
+            clear: both;
+        }
+        .clearfix{zoom:1;}
+
+        /* main */
+        .none { display: none;}
+        .width1063 { width: 1063px; margin: 0 auto; height: 100%; position: relative;}
+        .area0 { position: relative; width:100%; height: 3127px; background: url(imgs/38_bg0.jpg) no-repeat center center;}
+        .area1 { position: relative; width:100%; height: 1394px; background: url(imgs/38_bg1.jpg) no-repeat center center;}
+        .area2 { position: relative; width:100%; height: 2347px; background: url(imgs/38_bg2.jpg) no-repeat center center;}
+        .area3 { position: relative; width:100%; height: 1240px; background: url(imgs/38_bg3.jpg) no-repeat center center;}
+        .btn-large { width: 213px; height: 49px; line-height: 47px; text-align: center; color:#fff; font-size: 14px; display: block; background: url(imgs/38_btnBgLarge.png) no-repeat center center;}
+        .btn-large:hover { color:#fff;}
+        .btn-small { width: 126px; height: 42px; line-height: 40px; text-align: center; color:#fff; font-size: 12px; display: block; background: url(imgs/38_btnBgSmall.png) no-repeat center center;}
+        .btn-small:hover { color:#fff;}
+        .btn-more { width: 76px; height: 25px; line-height: 24px; text-indent: 10px; color:#ff0000; font-size: 12px; display: block; background: #fff url(imgs/38_more.png) no-repeat center center;}
+        .btn-more:hover { color:#ff0000;}
+
+        .product0 { width:100%; margin: 0 auto; height: 1612px; background: url(imgs/38_product0.jpg) no-repeat center center;  position: absolute; top: 1291px;}
+        .product1 { width:100%; margin: 0 auto; height: 951px; background: url(imgs/38_product1.jpg) no-repeat center center;  position: absolute; top: 245px;}
+        .product2 { width:100%; margin: 0 auto; height: 1910px; background: url(imgs/38_product2.jpg) no-repeat center center;  position: absolute; top: 259px;}
+        .product3 { width:100%; margin: 0 auto; height: 438px; background: url(imgs/38_product3.jpg) no-repeat center center;  position: absolute; top: 245px;}
+        .product0 .btn-more0 { position: absolute; top: 120px; right: 102px;}
+        .product0 .btn-large0 { position: absolute; top: 210px; right: 102px;}
+        .product0 .btn-more1 { position: absolute; top: 920px; right: 920px;}
+        .product0 .btn-large1 { position: absolute; top: 860px; right: 568px;}
+        .product0 .btn-more2 { position: absolute; top: 920px; right: 422px;}
+        .product0 .btn-large2 { position: absolute; top: 860px; right: 70px;}
+        .product0 .btn-more3 { position: absolute; top: 1560px; right: 920px;}
+        .product0 .btn-large3 { position: absolute; top: 1500px; right: 568px;}
+        .product0 .btn-more4 { position: absolute; top: 1560px; right: 422px;}
+        .product0 .btn-large4 { position: absolute; top: 1500px; right: 70px;}
+
+        .product1 .btn-small0 {position: absolute; top: 394px; left: 200px;}
+        .product1 .btn-small1 {position: absolute; top: 394px; left: 550px;}
+        .product1 .btn-small2 {position: absolute; top: 394px; left: 900px;}
+        .product1 .btn-large0 { position: absolute; top: 826px; left: 36px;}
+        .product1 .btn-large1 { position: absolute; top: 826px; left: 304px;}
+        .product1 .btn-large2 { position: absolute; top: 826px; left: 561px;}
+        .product1 .btn-large3 { position: absolute; top: 826px; left: 812px;}
+
+        .product2 .btn-small0 {position: absolute; top: 402px; left: 206px;}
+        .product2 .btn-small1 {position: absolute; top: 402px; left: 556px;}
+        .product2 .btn-small2 {position: absolute; top: 402px; left: 906px;}
+        .product2 .btn-small3 {position: absolute; top: 894px; left: 310px;}
+        .product2 .btn-small4 {position: absolute; top: 894px; left: 802px;}
+        .product2 .btn-large0 { position: absolute; top: 1350px; left: 39px;}
+        .product2 .btn-large1 { position: absolute; top: 1350px; left: 296px;}
+        .product2 .btn-large2 { position: absolute; top: 1350px; left: 552px;}
+        .product2 .btn-large3 { position: absolute; top: 1350px; left: 812px;}
+        .product2 .btn-large4 { position: absolute; top: 1804px; left: 39px;}
+        .product2 .btn-large5 { position: absolute; top: 1804px; left: 296px;}
+        .product2 .btn-large6 { position: absolute; top: 1804px; left: 552px;}
+        .product2 .btn-large7 { position: absolute; top: 1804px; left: 812px;}
+
+        .product3 .btn-large0 { position: absolute; top: 358px; left: 36px;}
+        .product3 .btn-large1 { position: absolute; top: 358px; left: 296px;}
+        .product3 .btn-large2 { position: absolute; top: 358px; left: 552px;}
+        .product3 .btn-large3 { position: absolute; top: 358px; left: 812px;}
+
+        .fixBar { position: absolute; top: 1180px; width: 100%; z-index: 99; left: -218px; display: none;}
+        .fixBarStatus { position: fixed; top: 20px;}
+        .fixBar ul { background-color:rgba(256, 256, 256, 0.85); z-index: 99; width: 174px;
+            -webkit-box-shadow:2px 2px 10px #d0b2b7;
+            -moz-box-shadow:2px 2px 10px #d0b2b7;
+            box-shadow:2px 2px 10px #d0b2b7; }
+        .fixBar li a { color:#5f293b; font-size:14px; display: block; height: 49px; line-height: 48px; border-bottom: 1px solid #cc8aac; width: 174px; text-indent: 22px;}
+        .fixBar li:last-child a { border-bottom: none;}
+        .fixBar li a:hover {color:#ff0000;}
+        #area0 { position: absolute; top: 1020px;}
+    </style>
+
+    <script>
+        /*
+        window.onscroll = function() {
+            var tmpH = $(document).scrollTop();
+            if (tmpH > 1160) {
+                $(".fixBar:not(.fixBarStatus)").addClass("fixBarStatus");
+            } else {
+                $(".fixBarStatus").removeClass("fixBarStatus");
+            }
+        };
+        */
+    </script>
+</head>
+<body style="min-width: 1640px;">
+    <div class="none">
+        <a href="#" class="btn-large ">立即购买</a>
+        <a href="#" class="btn-small ">立即购买</a>
+        <a href="#" class="btn-more">查看更多</a>
+    </div>
+    <div class="fixBar">
+        <div class="width1063">
+            <ul>
+                <li><a href="#area0">海外爆款</a></li>
+                <li><a href="#area1">爱自己，购美丽</a></li>
+                <li><a href="#area2">呵护我的宝贝</a></li>
+                <li><a href="#area3">对她，不得无礼</a></li>
+            </ul>
+        </div>
+    </div>
+    <a id="area0" href="javascript:void(0);"></a>
+    <div class="area0">
+        <div class="product0">
+            <div class="width1063">
+                <a href="#area3" class="btn-more btn-more0">查看更多</a>
+                <a href="http://www.sfheike.com/pad/p_lcem103792.htm" class="btn-large btn-large0">立即购买</a>
+                <a href="#area2" class="btn-more btn-more1">查看更多</a>
+                <a href="http://www.sfheike.com/pad/p_5g71104997.htm" class="btn-large btn-large1">立即购买</a>
+                <a href="#area2" class="btn-more btn-more2">查看更多</a>
+                <a href="http://www.sfheike.com/pad/p_kvwa104992.htm" class="btn-large btn-large2">立即购买</a>
+                <a href="#area1" class="btn-more btn-more3">查看更多</a>
+                <a href="http://www.sfheike.com/pad/p_qrw3104999.htm" class="btn-large btn-large3">立即购买</a>
+                <a href="#area1" class="btn-more btn-more4">查看更多</a>
+                <a href="http://www.sfheike.com/pad/p_6qdv104721.htm" class="btn-large btn-large4">立即购买</a>
+            </div>
+        </div>
+    </div>
+    <a id="area1" href="javascript:void(0);"></a>
+    <div class="area1">
+        <div class="product1">
+            <div class="width1063">
+                <a href="http://www.sfheike.com/pad/p_6qdv104721.htm" class="btn-small btn-small0">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_wd1c105184.htm" class="btn-small btn-small1">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_gi6i105186.htm" class="btn-small btn-small2">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_qrw3104999.htm" class="btn-large btn-large0">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_r7id104714.htm" class="btn-large btn-large1">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_prmu104715.htm" class="btn-large btn-large2">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_2wzd104719.htm" class="btn-large btn-large3">立即购买</a>
+            </div>
+        </div>
+    </div>
+    <a id="area2" href="javascript:void(0);"></a>
+    <div class="area2">
+        <div class="product2">
+            <div class="width1063">
+                <a href="http://www.sfheike.com/pad/p_si0g105171.htm" class="btn-small btn-small0">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_qpq9105172.htm" class="btn-small btn-small1">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_8u96105174.htm" class="btn-small btn-small2">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_kvwa104992.htm" class="btn-small btn-small3">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_ziqi105175.htm" class="btn-small btn-small4">立即购买</a>
+
+                <a href="http://www.sfheike.com/pad/p_60uw105162.htm" class="btn-large btn-large0">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_60uw105163.htm" class="btn-large btn-large1">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_60uw105164.htm" class="btn-large btn-large2">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_60uw105165.htm" class="btn-large btn-large3">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_qrw3104999.htm" class="btn-large btn-large4">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_r7id104714.htm" class="btn-large btn-large5">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_yzf3105164.htm" class="btn-large btn-large6">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_2wzd104719.htm" class="btn-large btn-large7">立即购买</a>
+            </div>
+        </div>
+    </div>
+    <a id="area3" href="javascript:void(0);"></a>
+    <div class="area3">
+        <div class="product3">
+            <div class="width1063">
+                <a href="http://www.sfheike.com/pad/p_lcem103792.htm" class="btn-large btn-large0">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_tg75103803.htm" class="btn-large btn-large1">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_o7v7104180.htm" class="btn-large btn-large2">立即购买</a>
+                <a href="http://www.sfheike.com/pad/p_eqop105027.htm" class="btn-large btn-large3">立即购买</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
